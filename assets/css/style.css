@@ -1,0 +1,606 @@
+:root {
+    --hover-brightness: brightness(70%);
+}
+
+html {
+    font-size: 62.5%;
+    font-family: "M PLUS Rounded 1c", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    scroll-behavior: smooth;
+}
+
+img {
+    max-width: 100%;
+}
+
+body {
+    font-size: clamp(1.4rem, 1.4vw, 1.8rem);
+    letter-spacing: .1rem;
+}
+
+/* 全体の設定 */
+
+#top {
+    background-image: url(/images/top/img3x-80.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 80vh;
+    background-position: top;
+    background-color: #ccc;
+    position: relative;
+}
+
+/* トップ */
+
+#top::after {
+    background-image: url(/images/top/catch@3x.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    content: "";
+    display: block;
+    /* width: 30%; */
+    width: clamp(120px, 30%, 300px);
+    height: fit-content;
+    aspect-ratio: 989/555;
+    position: absolute;
+    bottom: 2vh;
+    right: 2vw;
+}
+
+/* キャッチコピー */
+
+#onlineshop {
+    position: fixed;
+    bottom: 0;
+    /* width: 300px; */
+    width: clamp(200px, 40vw, 300px);
+    z-index: 9999;
+}
+
+#onlineshop div>img {
+    transition: .3s;
+}
+
+#onlineshop:hover div>img {
+    filter: var(--hover-brightness);
+}
+
+#onlineshop>div {
+    position: relative;
+}
+
+#onlineshop p {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0 .4em;
+    width: fit-content;
+    height: fit-content;
+
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 12%;
+    /* right: 0; */
+    margin: auto;
+
+    color: #fff;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 350;
+    font-style: normal;
+    font-size: clamp(1.5rem, 3vw, 2rem);
+}
+
+#onlineshop p img {
+    /* height: 2.2vw; */
+    width: clamp(1.6rem, 3.5vw, 2.4rem);
+}
+
+/* fizedのオンラインショップ */
+
+header {
+    width: 92vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 2;
+    margin: auto;
+    padding-top: 2em;
+}
+
+/* ヘッダー */
+
+h1 {
+    font-size: 3rem;
+}
+
+/* ロゴ */
+
+.menu-btn {
+    display: none;
+}
+
+.menu ul {
+    display: flex;
+    gap: 1rem;
+}
+
+.menu ul li {
+    font-size: 1.6rem;
+    padding: 1.5rem;
+    transition: .3s;
+}
+
+.menu ul li:hover {
+    opacity: .5;
+}
+
+/* ナビゲーション */
+
+h2 {
+    padding: 20rem 0 8rem;
+}
+
+h2 p {
+    width: fit-content;
+    margin: 0 auto;
+}
+
+h2 p:first-child {
+    font-family: "Barlow", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    border-bottom: #000 2px solid;
+    padding: 0 3vw;
+    font-size: clamp(2rem, 10vw, 6rem);
+    letter-spacing: .5rem;
+}
+
+h2 p:last-child {
+    padding-top: 10px;
+    letter-spacing: .5rem;
+}
+
+/* h2 */
+
+#features {
+    background-color: #d8d8d8;
+    padding-bottom: 15rem;
+}
+
+#features ul {
+    display: flex;
+    justify-content: space-between;
+    width: 85vw;
+    margin: 0 auto;
+}
+
+#features ul li {
+    width: 40vw;
+}
+
+#features ul img {
+    border: #808080 1px solid;
+}
+
+#features figure strong {
+    text-decoration: underline;
+    font-weight: 400;
+    text-decoration-color: #d9beb8;
+    text-decoration-thickness: .6em;
+    text-underline-offset: -.4em;
+    text-decoration-skip-ink: none;
+}
+
+#features h3 {
+    text-align: center;
+    letter-spacing: .3rem;
+    padding: 1rem 0;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 350;
+    font-style: normal;
+    font-size: clamp(2.2rem, 2vw, 3rem);
+}
+
+#features figure p {
+    line-height: 3rem;
+}
+
+/* features */
+
+#ringnote {
+    max-width: 700px;
+    margin: 10rem auto 0;
+    height: 400px;
+}
+
+#ringnote div {
+    background-image: url(/images/features/ringnote_02.png);
+    background-size: 100% auto;
+    background-repeat: repeat-y;
+    padding-left: 6em;
+}
+
+#ringnote div table {
+    width: 100%;
+    font-size: clamp(1rem, 2vw, 1.8rem);
+}
+
+td {
+    padding: 1.5rem 1rem;
+}
+
+/* ringnote(商品の詳細) */
+
+#lineup {
+    padding-bottom: 15rem;
+    position: relative;
+}
+
+#lineup span img:first-child {
+    /* width: 10vw; */
+    width: clamp(50px, 10vw, 100px);
+    position: absolute;
+    top: -2vh;
+    right: 5vw;
+}
+
+#lineup span img:last-child {
+    position: absolute;
+    width: clamp(80px, 10vw, 150px);
+    bottom: 0;
+    left: 4vw;
+}
+
+
+#lineup ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 87vw;
+    margin: 0 auto;
+    gap: 13rem 0;
+}
+
+#lineup ul li {
+    width: 24%;
+    transition: .3s;
+}
+
+#lineup ul li p {
+    text-align: center;
+    padding-bottom: 2rem;
+}
+
+/* lineup */
+
+#lineup a {
+    position: relative;
+    display: block;
+    max-width: 350px;
+    margin: 10rem auto 0;
+}
+
+#lineup a>img {
+    transition: .3s;
+}
+
+#lineup a:hover>img {
+    filter: var(--hover-brightness);
+}
+
+#lineup a p {
+    color: #fff;
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0 1rem;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: fit-content;
+    height: fit-content;
+
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 350;
+    font-style: normal;
+    font-size: clamp(1.8rem, 3vw, 2rem);
+
+}
+
+#lineup a p img {
+    height: 1.4rem;
+
+}
+
+/* オンラインショップ */
+
+footer {
+    background-color: #3b3b3b;
+    color: #fff;
+    padding: 12rem 0 3rem;
+}
+
+/* footer */
+
+footer>div {
+    display: flex;
+    width: 87vw;
+    margin: 0 auto;
+    height: 15rem;
+}
+
+footer>div>div {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+footer>div>div>div p {
+    line-height: 2.5rem;
+    font-size: 1.4rem;
+}
+
+/* footerの左側 */
+
+aside {
+    width: 30%;
+}
+
+aside ul {
+    font-size: clamp(1.4rem, 1.5vw, 1.6rem);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+footer a {
+    transition: .3s;
+}
+
+footer ul a:hover {
+    opacity: .5;
+}
+
+/* footerの右側 */
+
+footer>ul {
+    display: flex;
+    margin-top: 3rem;
+    justify-content: center;
+    gap: 2rem;
+}
+
+footer>ul li {
+    padding: .5rem;
+    font-size: 2rem;
+}
+
+/* SNS */
+
+footer h6 {
+    text-align: center;
+    margin-top: 5rem;
+    font-size: 1rem;
+}
+
+/* コピーライト */
+
+@media screen and (max-width: 959px) {
+
+    h2 {
+        padding: 10rem 0 4rem;
+    }
+
+    h2 span {
+        padding: 0 2rem;
+    }
+
+    /* 共通設定 */
+
+    #top {
+        position: relative;
+    }
+
+    /* top */
+
+    header {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    /* header */
+
+    #close {
+        color: #fff;
+    }
+
+    .menu-btn {
+        display: block;
+        z-index: 100;
+        transition: .3s;
+        cursor: pointer;
+    }
+
+    .menu-btn span {
+        font-size: 4rem;
+        font-weight: 300;
+    }
+
+    .menu-btn span::before {
+        content: "\e5d2";
+    }
+
+    .menu-btn:has(+ .menu.is-active) span::before {
+        color: #fff;
+        content: "\e5cd";
+    }
+
+    .menu {
+        position: absolute;
+        background-color: #00000099;
+        width: 100%;
+        top: 0;
+        left: 0;
+        padding-top: 10rem;
+
+        pointer-events: none;
+        opacity: 0;
+        transition: opacity .2s;
+    }
+
+    .menu ul {
+        display: block;
+        color: #fff;
+        text-align: center;
+    }
+
+    .menu ul li {
+        padding: 0;
+    }
+
+    .menu ul li:hover {
+        opacity: 1;
+    }
+
+    .menu ul li a {
+        display: block;
+        padding: 3rem 0;
+        transition: .3s;
+    }
+
+    .menu ul li a:hover {
+        background: #00000080;
+    }
+
+    .menu.is-active {
+        pointer-events: auto;
+        opacity: 1;
+    }
+
+    /* hamburgermenu and navigation */
+
+    #features ul {
+        display: block;
+    }
+
+    #features ul li:last-child {
+        padding-top: 10rem;
+    }
+
+    #features {
+        padding-bottom: 10rem;
+    }
+
+    #features ul li {
+        width: 100%;
+    }
+
+    #features figure p {
+        line-height: 1.8rem;
+    }
+
+
+    #ringnote {
+        /* padding: 0 2rem; */
+        width: 87vw;
+        margin: 8rem auto 0;
+    }
+
+    #ringnote div {
+        padding-left: 10vw;
+    }
+
+    /* features */
+
+    #lineup {
+        padding-bottom: 10rem;
+    }
+
+    #lineup ul {
+        display: flex;
+        gap: 5rem 0;
+    }
+
+    #lineup ul li:nth-child(n+5) {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
+    #lineup ul li {
+        width: 49%;
+        padding-bottom: 0;
+    }
+
+    #lineup a {
+        margin-top: 5rem;
+        padding: 0 2rem;
+    }
+
+    /* lineup */
+
+    footer h1 {
+        width: fit-content;
+        margin: 0 auto;
+    }
+
+    footer {
+        padding: 8rem 0 2rem;
+    }
+
+    footer>div {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+
+
+    footer>div>div {
+        display: block;
+        width: 100%;
+    }
+
+    footer>div>div>div {
+        display: none;
+    }
+
+    aside {
+        width: 100%;
+    }
+
+    aside ul {
+        display: block;
+        margin-top: 3rem;
+    }
+
+    aside ul li {
+        width: fit-content;
+        margin: 0 auto;
+        padding: 1rem;
+    }
+
+    footer>ul {
+        margin-top: 2rem;
+    }
+
+    footer h6 {
+        margin-top: 4rem;
+    }
+
+    /* footer */
+}
+
+/* text-decorationはtransition効かないのか */
