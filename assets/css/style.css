@@ -1,5 +1,6 @@
 :root {
     --hover-brightness: brightness(70%);
+    --width: 87vw;
 }
 
 html {
@@ -19,41 +20,39 @@ body {
     letter-spacing: .1rem;
 }
 
-/* 全体の設定 */
+/* common settings */
 
 #top {
     background-image: url(/images/top/img3x-80.jpg);
     background-size: cover;
     background-repeat: no-repeat;
-    height: 80vh;
     background-position: top;
-    background-color: #ccc;
+    height: 80vh;
     position: relative;
 }
 
-/* トップ */
+/* top */
 
 #top::after {
     background-image: url(/images/top/catch@3x.png);
-    background-repeat: no-repeat;
     background-size: contain;
+    background-repeat: no-repeat;
     content: "";
     display: block;
-    /* width: 30%; */
     width: clamp(120px, 30%, 300px);
     height: fit-content;
     aspect-ratio: 989/555;
+
     position: absolute;
     bottom: 2vh;
     right: 2vw;
 }
 
-/* キャッチコピー */
+/* catchphrase */
 
 #onlineshop {
     position: fixed;
     bottom: 0;
-    /* width: 300px; */
     width: clamp(200px, 40vw, 300px);
     z-index: 9999;
 }
@@ -84,7 +83,6 @@ body {
     top: 0;
     bottom: 0;
     left: 12%;
-    /* right: 0; */
     margin: auto;
 
     color: #fff;
@@ -96,29 +94,29 @@ body {
 }
 
 #onlineshop p img {
-    /* height: 2.2vw; */
     width: clamp(1.6rem, 3.5vw, 2.4rem);
 }
 
-/* fizedのオンラインショップ */
+/* fixed onlineshop */
 
 header {
-    width: 92vw;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    z-index: 2;
+    
+    width: 92vw;
     margin: auto;
     padding-top: 2em;
+    z-index: 2;
 }
 
-/* ヘッダー */
+/* header */
 
 h1 {
     font-size: 3rem;
 }
 
-/* ロゴ */
+/* h1 */
 
 .menu-btn {
     display: none;
@@ -131,7 +129,7 @@ h1 {
 
 .menu ul li {
     font-size: 1.6rem;
-    padding: 1.5rem;
+    padding: 1rem;
     transition: .3s;
 }
 
@@ -139,7 +137,7 @@ h1 {
     opacity: .5;
 }
 
-/* ナビゲーション */
+/* navigation */
 
 h2 {
     padding: 20rem 0 8rem;
@@ -151,17 +149,18 @@ h2 p {
 }
 
 h2 p:first-child {
+    font-size: clamp(1rem, 8vw, 5rem);
     font-family: "Barlow", sans-serif;
     font-weight: 400;
     font-style: normal;
-    border-bottom: #000 2px solid;
-    padding: 0 3vw;
-    font-size: clamp(2rem, 10vw, 6rem);
     letter-spacing: .5rem;
+    
+    padding: 0 3vw;
+    border-bottom: #000 2px solid;
 }
 
 h2 p:last-child {
-    padding-top: 10px;
+    padding-top: 1rem;
     letter-spacing: .5rem;
 }
 
@@ -175,7 +174,8 @@ h2 p:last-child {
 #features ul {
     display: flex;
     justify-content: space-between;
-    width: 85vw;
+
+    width: var(--width);
     margin: 0 auto;
 }
 
@@ -188,8 +188,8 @@ h2 p:last-child {
 }
 
 #features figure strong {
-    text-decoration: underline;
     font-weight: 400;
+    text-decoration: underline;
     text-decoration-color: #d9beb8;
     text-decoration-thickness: .6em;
     text-underline-offset: -.4em;
@@ -198,13 +198,13 @@ h2 p:last-child {
 
 #features h3 {
     text-align: center;
-    letter-spacing: .3rem;
-    padding: 1rem 0;
     font-family: "Montserrat", sans-serif;
     font-optical-sizing: auto;
     font-weight: 350;
     font-style: normal;
     font-size: clamp(2.2rem, 2vw, 3rem);
+    letter-spacing: .3rem;
+    padding: 1rem 0;
 }
 
 #features figure p {
@@ -235,7 +235,7 @@ td {
     padding: 1.5rem 1rem;
 }
 
-/* ringnote(商品の詳細) */
+/* table (details) */
 
 #lineup {
     padding-bottom: 15rem;
@@ -243,7 +243,6 @@ td {
 }
 
 #lineup span img:first-child {
-    /* width: 10vw; */
     width: clamp(50px, 10vw, 100px);
     position: absolute;
     top: -2vh;
@@ -251,18 +250,18 @@ td {
 }
 
 #lineup span img:last-child {
-    position: absolute;
     width: clamp(80px, 10vw, 150px);
+    position: absolute;
     bottom: 0;
     left: 4vw;
 }
-
 
 #lineup ul {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    width: 87vw;
+
+    width: var(--width);
     margin: 0 auto;
     gap: 13rem 0;
 }
@@ -280,9 +279,9 @@ td {
 /* lineup */
 
 #lineup a {
-    position: relative;
-    display: block;
     max-width: 350px;
+    display: block;
+    position: relative;
     margin: 10rem auto 0;
 }
 
@@ -295,27 +294,29 @@ td {
 }
 
 #lineup a p {
-    color: #fff;
-    position: absolute;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
     align-items: center;
     justify-content: space-between;
     gap: 0 1rem;
+
+    position: absolute;
     top: 0;
     bottom: 0;
     left: 0;
     right: 0;
     margin: auto;
+    
     width: fit-content;
     height: fit-content;
-
+    
     font-family: "Montserrat", sans-serif;
     font-optical-sizing: auto;
     font-weight: 350;
     font-style: normal;
     font-size: clamp(1.8rem, 3vw, 2rem);
+    color: #fff;
 
 }
 
@@ -324,7 +325,7 @@ td {
 
 }
 
-/* オンラインショップ */
+/* onlineshop */
 
 footer {
     background-color: #3b3b3b;
@@ -336,16 +337,16 @@ footer {
 
 footer>div {
     display: flex;
-    width: 87vw;
-    margin: 0 auto;
     height: 15rem;
+    width: var(--width);
+    margin: 0 auto;
 }
 
 footer>div>div {
-    width: 70%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    width: 70%;
 }
 
 footer>div>div>div p {
@@ -353,18 +354,18 @@ footer>div>div>div p {
     font-size: 1.4rem;
 }
 
-/* footerの左側 */
+/* footer-left */
 
 aside {
     width: 30%;
 }
 
 aside ul {
-    font-size: clamp(1.4rem, 1.5vw, 1.6rem);
-    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    height: 100%;
+    font-size: clamp(1.4rem, 1.5vw, 1.6rem);
 }
 
 footer a {
@@ -375,21 +376,21 @@ footer ul a:hover {
     opacity: .5;
 }
 
-/* footerの右側 */
+/* footer-right */
 
 footer>ul {
     display: flex;
-    margin-top: 3rem;
     justify-content: center;
     gap: 2rem;
+    margin-top: 3rem;
 }
 
 footer>ul li {
-    padding: .5rem;
     font-size: 2rem;
+    padding: .5rem;
 }
 
-/* SNS */
+/* social */
 
 footer h6 {
     text-align: center;
@@ -397,7 +398,7 @@ footer h6 {
     font-size: 1rem;
 }
 
-/* コピーライト */
+/* copyright */
 
 @media screen and (max-width: 959px) {
 
@@ -409,7 +410,7 @@ footer h6 {
         padding: 0 2rem;
     }
 
-    /* 共通設定 */
+    /* h2 */
 
     #top {
         position: relative;
@@ -430,9 +431,9 @@ footer h6 {
 
     .menu-btn {
         display: block;
-        z-index: 100;
-        transition: .3s;
         cursor: pointer;
+        transition: .3s;
+        z-index: 100;
     }
 
     .menu-btn span {
@@ -450,22 +451,23 @@ footer h6 {
     }
 
     .menu {
-        position: absolute;
-        background-color: #00000099;
         width: 100%;
+        position: absolute;
         top: 0;
         left: 0;
-        padding-top: 10rem;
-
+        
         pointer-events: none;
         opacity: 0;
         transition: opacity .2s;
+        
+        padding-top: 10rem;
+        background-color: #00000099;
     }
 
     .menu ul {
         display: block;
-        color: #fff;
         text-align: center;
+        color: #fff;
     }
 
     .menu ul li {
@@ -513,9 +515,9 @@ footer h6 {
         line-height: 1.8rem;
     }
 
+    /* features */
 
     #ringnote {
-        /* padding: 0 2rem; */
         width: 87vw;
         margin: 8rem auto 0;
     }
@@ -524,7 +526,7 @@ footer h6 {
         padding-left: 10vw;
     }
 
-    /* features */
+    /* table (details) */
 
     #lineup {
         padding-bottom: 10rem;
@@ -535,30 +537,27 @@ footer h6 {
         gap: 5rem 0;
     }
 
-    #lineup ul li:nth-child(n+5) {
-        padding-top: 0;
-        padding-bottom: 0;
-    }
-
     #lineup ul li {
         width: 49%;
         padding-bottom: 0;
     }
+
+    /* lineup */
 
     #lineup a {
         margin-top: 5rem;
         padding: 0 2rem;
     }
 
-    /* lineup */
+    /* onlineshop */
+
+    footer {
+        padding: 8rem 0 2rem;
+    }
 
     footer h1 {
         width: fit-content;
         margin: 0 auto;
-    }
-
-    footer {
-        padding: 8rem 0 2rem;
     }
 
     footer>div {
@@ -602,5 +601,3 @@ footer h6 {
 
     /* footer */
 }
-
-/* text-decorationはtransition効かないのか */
